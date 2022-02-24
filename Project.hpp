@@ -10,6 +10,8 @@
 
 #include <fstream>
 #include <map>
+#include <list>
+#include "Person.hpp"
 
 class Project {
     public:
