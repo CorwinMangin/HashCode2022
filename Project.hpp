@@ -8,6 +8,9 @@
 #ifndef PROJECT_HPP_
 #define PROJECT_HPP_
 
+#include <fstream>
+#include <map>
+
 class Project {
     public:
         Project();
@@ -18,7 +21,6 @@ class Project {
         size_t bestBefore;
         std::map<std::string, size_t> roles;
         
-
     protected:
     private:
 };
