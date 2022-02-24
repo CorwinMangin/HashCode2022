@@ -25,11 +25,12 @@ class Project {
         size_t points;
         size_t nbContributors;
         std::map<std::string, bool> skillNeeded;
-        std::map<std::string, size_t> roles;
+        std::map<std::string, size_t> skillLevel;
         std::list<Person> contributors;
         bool isCompleted;
         bool isBeingWorkedOn;
-        
+
+        void setSkillLevel(std::string skillName, size_t level);
         void AddSkillNeed(std::string nameSkill);
         void AddRole(std::string nameRole, size_t lvl);
         void AddContributor(Person &contributor, std::string skill);
