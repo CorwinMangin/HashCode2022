@@ -12,7 +12,7 @@ NAME	=	hashCode
 all:	$(NAME)
 
 $(NAME): $(SRC)
-	g++ -std=c++20 -Wall -Wextra -Werror -g -o $(NAME) $(SRC)
+	g++ -g -o $(NAME) $(SRC)
 
 clean:
 	rm -f *~
