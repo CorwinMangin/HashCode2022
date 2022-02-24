@@ -115,6 +115,16 @@ void Parser::parseMe()
     openFile.close();
 }
 
+std::list<Person> Parser::getPerson()
+{
+    return this->_PersonList;
+}
+
+std::list<Project> Parser::getProject()
+{
+    return this->_ProjectList;
+}
+
 Parser::~Parser()
 {
 }
