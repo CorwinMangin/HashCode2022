@@ -32,7 +32,6 @@ class Project {
 
         void setSkillLevel(std::string skillName, size_t level);
         void AddSkillNeed(std::string nameSkill);
-        void AddRole(std::string nameRole, size_t lvl);
         void AddContributor(Person &contributor, std::string skill);
         
     protected:

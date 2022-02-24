@@ -20,9 +20,9 @@ void Project::AddSkillNeed(std::string nameSkill)
     this->skillNeeded[nameSkill] = false;
 }
 
-void Project::AddRole(std::string nameRole, size_t lvl)
+void Project::setSkillLevel(std::string skillName, size_t level)
 {
-    this->roles[nameRole] = lvl;
+    this->skillLevel[skillName] = level;
 }
 
 void Project::AddContributor(Person &contributor, std::string skill)
