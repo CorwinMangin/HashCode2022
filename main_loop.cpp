@@ -38,10 +38,7 @@ void freePersons(std::list<Person> workers, std::list<Project> projects)
 
 void fillContributors(Project *currentProject, std::list<Person> workers)
 {
-    for (std::map<string, bool>::iterator it = currentProject->skillNeeded.begin(); it != currentProject->skillNeeded.end(); it++) {
-        if (currentProject->skillNeeded[it] == false) {
-
-        }
+    for (std::map<string, bool>::iterator it = currentProject->skillNeeded.begin(); it != currentProject->skillNeeded.end(); it++)
     }
 }
 
