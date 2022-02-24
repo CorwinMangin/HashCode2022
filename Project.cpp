@@ -22,10 +22,12 @@ void Project::AddSkillNeed(std::string nameSkill)
 
 void Project::AddRole(std::string nameRole, size_t lvl)
 {
-    this->roles[nameRole] = lvl
+    this->roles[nameRole] = lvl;
 }
 
-void Project::AddContributor(Person &contributor)
+void Project::AddContributor(Person &contributor, std::string skill)
 {
+    contributor.isFree = false;
+    this->contributors.push_back(contributor);
 }
 

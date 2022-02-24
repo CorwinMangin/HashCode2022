@@ -24,10 +24,11 @@ class Project {
         std::map<std::string, bool> skillNeeded;
         std::map<std::string, size_t> roles;
         std::list<Person> contributors;
- 
+        bool isCompleted;
+        
         void AddSkillNeed(std::string nameSkill);
         void AddRole(std::string nameRole, size_t lvl);
-        void AddContributor(Person &contributor);
+        void AddContributor(Person &contributor, std::string skill);
         
     protected:
     private:

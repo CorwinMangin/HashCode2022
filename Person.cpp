@@ -14,3 +14,8 @@ Person::Person()
 Person::~Person()
 {
 }
+
+void Person::AddSkill(std::string skill, size_t size)
+{
+    this->skills[skill] = size;
+}
