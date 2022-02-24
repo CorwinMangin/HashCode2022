@@ -28,6 +28,11 @@ void Project::AddRole(std::string nameRole, size_t lvl)
 void Project::AddContributor(Person &contributor, std::string skill)
 {
     contributor.isFree = false;
+    size_t skillAsk = this->roles[skill];
+    size_t skillNbr = contributor.skills[skill];
+    if (skillAsk <= skillNbr)
+        contributor.skills[skill] += 1;
+    this->skillNeeded[skill] = true;
     this->contributors.push_back(contributor);
 }
 
