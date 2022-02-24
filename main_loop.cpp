@@ -43,24 +43,44 @@ void freePersons(std::list<Person> workers, std::list<Project> projects)
 
 void fillContributors(Project *currentProject, std::list<Person> workers)
 {
-    for (std::map<string, bool>::iterator it = currentProject->skillNeeded.begin(); it != currentProject->skillNeeded.end(); it++)
+    for (std::map<string, bool>::iterator it = currentProject->skillNeeded.begin(); it != currentProject->skillNeeded.end(); it++) {
+        if (it->second == false) {
+            for (std::list<Person>::iterator x = workers.begin(); x != workers.end(); x++) {
+                if (x->isFree == true && x->skills[it->first] >= currentProject->skillLevel[it->first] - 1) {
+                    x->isFree == false;
+                    it->second == true;
+                }
+            }
+        }
     }
 }
 
 void startProject(Project *currentProject)
 {
+    std::ofstream openFile;
+    currentProject->isBeingWorkedOn = true;
+    openFile.open("Delivery.txt");
+    openFile << '\n';
+    openFile << currentProject->name << '\n';
+    for (auto v : currentProject->contributors)
+        openFile << v.name << ' ';
+}
 
+void updateProjects(std::list<Project> projects)
+{
+    
 }
 
 void mainLoop(std::list<Person> workers, std::list<Project> projects)
 {
     size_t days = 0;
 
-    while (/* loop condition */) {
+    while (areAllProjectsFilled(projects)) {
         Project *currentProject = findShortestDeadLine(projects);
 
         freePersons(workers, projects);
         fillContributors(currentProject, workers);
+        if ()
         days++;
     }
 }
