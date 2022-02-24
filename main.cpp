@@ -9,6 +9,7 @@
 #include "Person.hpp"
 #include <list>
 #include <array>
+
 int main()
 {
     std::map<Project, std::list<Person>> actualProject;

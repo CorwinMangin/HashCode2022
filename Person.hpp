@@ -18,6 +18,7 @@ class Person {
         std::string skillNextLevel;
         std::string name;
         std::map<std::string, size_t> skills;
+        void AddSkill(std::string skill, size_t size);
         bool isFree;
 
     protected:
