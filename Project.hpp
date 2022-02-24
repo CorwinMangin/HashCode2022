@@ -20,11 +20,15 @@ class Project {
 
         std::string name;
         size_t duration;
+        size_t daysLeft;
         size_t bestBefore;
+        size_t points;
+        size_t nbContributors;
         std::map<std::string, bool> skillNeeded;
         std::map<std::string, size_t> roles;
         std::list<Person> contributors;
         bool isCompleted;
+        bool isBeingWorkedOn;
         
         void AddSkillNeed(std::string nameSkill);
         void AddRole(std::string nameRole, size_t lvl);
