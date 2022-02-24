@@ -7,8 +7,13 @@
 using std::string;
 
 //return true if every projects are filled with peoples 
-bool areAllProjectsFilled(std::list<Project> projects) {
-
+bool areAllProjectsFilled(std::list<Project> projects)
+{
+    for (std::list<Project>::iterator it = projects.begin(); it != projects.end(); it++) {
+        if (it->isCompleted == false && it->isBeingWorkedOn == false)
+            return true;
+    }
+    return false;
 }
 
 Project *findShortestDeadLine(std::list<Project> projects)
