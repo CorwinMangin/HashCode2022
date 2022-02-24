@@ -28,7 +28,7 @@ void Project::setSkillLevel(std::string skillName, size_t level)
 void Project::AddContributor(Person &contributor, std::string skill)
 {
     contributor.isFree = false;
-    size_t skillAsk = this->roles[skill];
+    size_t skillAsk = this->skillLevel[skill];
     size_t skillNbr = contributor.skills[skill];
     if (skillAsk <= skillNbr)
         contributor.skills[skill] += 1;
